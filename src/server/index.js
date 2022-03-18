@@ -4,19 +4,24 @@ const mockAPIResponse = require('./mockAPI.js')
 
 // using env vars
 const dotenv = require('dotenv')
-dotenv.config()
+dotenv.config()  
+ 
+ // contacting meaningCloud
+function getApiData(){
+  /*   const formdata = new FormData();
+    formdata.append("key", process.env.API_KEY);
+    formdata.append("txt", "YOUR TEXT HERE");
+    formdata.append("lang", "en");  // 2-letter code, like en es fr ...
+    
+    console.table(formData);
 
-  
-  const formdata = new FormData();
-  formdata.append("key", process.env.API_KEY);
-  formdata.append("txt", "YOUR TEXT HERE");
-  formdata.append("lang", "en");  // 2-letter code, like en es fr ...
-  
-  const requestOptions = {
-      method: 'POST',
-      body: formdata,
-      redirect: 'follow'
-    };
+    const requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
+      }; */
+}
+
     
     const app = express()
     
@@ -33,8 +38,20 @@ dotenv.config()
     app.listen(8080, function () {
         console.log('Example app listening on port 8080!')
         console.log(`Your API key is ${process.env.API_KEY}`);
+       /*  getApiData(); */
 })
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+// POST route handler
+app.post('/add', handlePostedData);
+
+function handlePostedData(req, res){
+    let newData = req.body;
+/*     projectData["date"] = newData.date;
+    projectData["city"] = newData.city;
+    projectData["zipcode"] = newData.zipcode;
+    res.send(projectData); */
+}
