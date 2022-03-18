@@ -1,0 +1,5 @@
+node_modules
+dist
+_initial_download
+.commands_notes
+.DS_store
