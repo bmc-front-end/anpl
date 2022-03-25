@@ -5,30 +5,21 @@ const mockAPIResponse = require('./mockAPI.js')
 // using env vars
 const dotenv = require('dotenv')
 dotenv.config()  
+const API_KEY = process.env.API_KEY
+
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const fetch = require('node-fetch')
  
- // contacting meaningCloud
-function getApiData(){
-  /*   const formdata = new FormData();
-    formdata.append("key", process.env.API_KEY);
-    formdata.append("txt", "YOUR TEXT HERE");
-    formdata.append("lang", "en");  // 2-letter code, like en es fr ...
+ const app = express()
+ app.use(express.static('dist'))
     
-    console.table(formData);
+console.log(__dirname)
 
-    const requestOptions = {
-        method: 'POST',
-        body: formdata,
-        redirect: 'follow'
-      }; */
-}
+app.use(cors())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
-    
-    const app = express()
-    
-    app.use(express.static('dist'))
-    
-    console.log(__dirname)
-    
     app.get('/', function (req, res) {
         res.sendFile('dist/index.html')
         // res.sendFile(path.resolve('src/client/views/index.html'))
@@ -38,7 +29,6 @@ function getApiData(){
     app.listen(8080, function () {
         console.log('Example app listening on port 8080!')
         console.log(`Your API key is ${process.env.API_KEY}`);
-       /*  getApiData(); */
 })
 
 app.get('/test', function (req, res) {
@@ -46,12 +36,29 @@ app.get('/test', function (req, res) {
 })
 
 // POST route handler
-app.post('/add', handlePostedData);
+app.post('/handlePostedData', handlePostedData);
 
 function handlePostedData(req, res){
-    let newData = req.body;
-/*     projectData["date"] = newData.date;
-    projectData["city"] = newData.city;
-    projectData["zipcode"] = newData.zipcode;
-    res.send(projectData); */
+    let articleURL = req.body.urlTarget;
+    console.log('url sent to the server', articleURL);
 }
+
+/*  
+app.post('/userData', async(req, res) => {
+    let articleURL = req.body.input;
+
+    console.log('url sent to the server', articleURL);
+
+   const resp = await fetch("https://api.meaningcloud.com/sentiment-2.1?key=" + API_KEY + "&url=" + articleURL + "&lang=en");
+
+    try {
+        const data = await resp.json();
+        res.send(data);
+        console.log(resp);
+
+    } catch (error) {
+        console.log("error", error);
+    } 
+})
+*/
+

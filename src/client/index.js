@@ -7,7 +7,6 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-console.log(checkForName);
+console.log('hello from index.js', checkForName);
 
-/* alert("I EXIST")
-console.log("CHANGE!!"); */
+export { checkForName, handleSubmit};
