@@ -38,27 +38,22 @@ app.get('/test', function (req, res) {
 // POST route handler
 app.post('/handlePostedData', handlePostedData);
 
-function handlePostedData(req, res){
+async function handlePostedData(req, res){
     let articleURL = req.body.urlTarget;
     console.log('url sent to the server', articleURL);
-}
 
-/*  
-app.post('/userData', async(req, res) => {
-    let articleURL = req.body.input;
-
-    console.log('url sent to the server', articleURL);
-
-   const resp = await fetch("https://api.meaningcloud.com/sentiment-2.1?key=" + API_KEY + "&url=" + articleURL + "&lang=en");
+    const API_response = await fetch("https://api.meaningcloud.com/sentiment-2.1?key=" + API_KEY + "&url=" + articleURL + "&lang=en");
 
     try {
-        const data = await resp.json();
-        res.send(data);
-        console.log(resp);
+        const receivedData = await API_response.json();
+     
+        console.log('API_response',API_response);
+        console.log('receivedData',receivedData);
+
+        res.send(receivedData);
+        
 
     } catch (error) {
         console.log("error", error);
-    } 
-})
-*/
-
+    }
+}

@@ -7,6 +7,6 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-console.log('hello from index.js', checkForName);
+console.log('hello from index.js');
 
 export { checkForName, handleSubmit};

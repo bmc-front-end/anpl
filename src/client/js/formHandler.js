@@ -16,9 +16,17 @@ async function handleSubmit(event) {
     })
     .then(res => res.json())
     .then(res => {
-        //updateUI(res);
-        console.log('updating UI')
+        console.log('res',res)
+        updateUI(res);
     })
+
+// Update UI
+const updateUI = (res) => {
+    document.getElementById('irony').innerHTML = `Irony: ${res.irony}`;
+/*     document.getElementById('confidence').innerHTML = `Confidence: ${res.confidence}`;
+    document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`;
+    document.getElementById('polarity').innerHTML = `Polarity: ${res.score_tag}`; */
+}
 
 
 /*     console.log("::: Form Submitted :::")
