@@ -39,9 +39,9 @@ app.get('/test', function (req, res) {
 app.post('/handlePostedData', handlePostedData);
 
 async function handlePostedData(req, res){
+    
     let articleURL = req.body.urlTarget;
     console.log('url sent to the server', articleURL);
-
     const API_response = await fetch("https://api.meaningcloud.com/sentiment-2.1?key=" + API_KEY + "&url=" + articleURL + "&lang=en");
 
     try {

@@ -21,7 +21,7 @@ async function handleSubmit(event) {
     })
 
 // Update UI
-const updateUI = (res) => {
+function updateUI (res){
     document.getElementById('irony').innerHTML = `Irony: ${res.irony}`;
 /*     document.getElementById('confidence').innerHTML = `Confidence: ${res.confidence}`;
     document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`;
@@ -38,4 +38,4 @@ const updateUI = (res) => {
     }) */
 }
 
-export { handleSubmit }
+export { handleSubmit, updateUI }
