@@ -1,6 +1,6 @@
-import { checkForName } from './js/nameChecker'
+import { checkUrl } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
-import { updateUI } from './js/formHandler'
+//import { updateUI } from './js/formHandler'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -10,4 +10,4 @@ import './styles/header.scss'
 
 //console.log('hello from index.js');
 
-export { checkForName, handleSubmit, updateUI}
+export { checkUrl, handleSubmit}

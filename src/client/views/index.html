@@ -4,24 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title>Test</title>
-
 </head>
 
 <body>
 
     <header>
-        <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
+        <div class="logo"><span class="emph">N</span>atural<br><span class="emph">l</span>anguage<br><span
+                class="emph">p</span>rocessing</div>
+        <div class="navigation">
+            <ul>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Terms of use</a></li>
+            </ul>
         </div>
     </header>
 
     <main>
         <section>
+            <h1 class="form">Article Sentiment Analysis</h1>
             <form onsubmit="return Client.handleSubmit(event)">
-                <label for="title">Enter your URL here</label>
+                <label for="title">Enter your URL of your article here</label>
                 <input id="url" type="text" name="url" value="" placeholder="URL">
                 <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return Client.handleSubmit(event)">
@@ -29,8 +33,8 @@
         </section>
 
         <section>
-            <h2>Results:</h2>
-            <div id="results">
+            <h2>Results</h2>
+            <div class="results">
                 <div id="polarity"></div>
                 <div id="subjectivity"></div>
                 <div id="confidence"></div>
@@ -40,9 +44,11 @@
     </main>
 
     <footer>
-        <p>This is a footer</p>
+        <ul>
+            <li><a href="">Site map</a></li>
+            <li>NPL all rights reserved &copy;</li>
+        </ul>
     </footer>
-
 </body>
 
 </html>

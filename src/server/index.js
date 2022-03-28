@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
     // designates what port the app will listen to for incoming requests
     app.listen(8080, function () {
         console.log('Example app listening on port 8080!')
-        console.log(`Your API key is ${process.env.API_KEY}`);
+       // console.log(`Your API key is ${process.env.API_KEY}`);
 })
 
 app.get('/test', function (req, res) {
@@ -47,8 +47,8 @@ async function handlePostedData(req, res){
     try {
         const receivedData = await API_response.json();
      
-        console.log('API_response',API_response);
-        console.log('receivedData',receivedData);
+        //console.log('API_response',API_response);
+        //console.log('receivedData',receivedData);
 
         res.send(receivedData);
         

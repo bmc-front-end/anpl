@@ -1,5 +1,34 @@
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+    justify-content:space-between;
+  //  padding: 10px 40px;
+}
+
+.logo {
+ //   display: hidden;
+width:fit-content;
+height: fit-content;
+ //   background: url("../views/logo.png") center;
+ background-color:#00f5d4;
+ border-radius:0px 20px 0px 20px;
+ padding:20px;
+ font-size:1.25rem;
+ line-height: 2rem;
+}
+
+.navigation ul {
+    border-radius:0px 10px 0px 20px;    
+    background-color: #f5b9dd;
+    padding:20px;
+    font-size:1.25rem;
+}
+
+.navigation li {
+    padding-bottom:1.25rem;
+}
+
+
+.logo .emph {
+text-transform: uppercase;
+font-weight: 800;
 }

@@ -2,6 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
@@ -12,3 +14,32 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+section div.results {
+    border-radius:0px 40px 0px 40px;    
+    background-color: #99E6FF;
+    padding:40px
+}
+
+section div.results div {
+    padding-bottom:20px
+}
+
+h1, h2 {
+    padding-bottom:1.5rem;
+    font-weight: 800;
+}
+
+h1{
+    font-size:2rem;
+
+}
+
+h2{
+    font-size:1.5rem;
+}
+
+a, a:active, a:visited {
+    color: #000;
+}
+

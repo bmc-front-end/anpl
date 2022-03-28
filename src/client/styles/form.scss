@@ -1,7 +1,7 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+    border-radius:20px 0px 20px 0px;
     padding: 40px;
+    background-color:#feee85;
 }
 
 input {
@@ -9,4 +9,17 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    border-radius: 20px;
+}
+
+input[submit]{
+    border-radius:20px;
+}
+
+label {
+    font-weight:800;
+}
+
+h1.form {
+    text-align: center;
 }
