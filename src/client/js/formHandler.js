@@ -21,20 +21,21 @@ async function handleSubmit(event) {
             .then((res) => {
                 console.log("res", res);
                 // updateUI(res);
-                document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
-                document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
-                document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
-                document.getElementById("polarity").innerHTML = `Polarity: ${res.score_tag}`;
+               updateUI(res);
             });
-
-        // Update UI
-        function updateUI(res) {
-           
-        }
+        
 
     } else {
         alert("Please enter a valid URL");
     }
 }
 
-export { handleSubmit };
+// Update UI
+function updateUI(res) {
+    document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
+        document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
+        document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
+        document.getElementById("polarity").innerHTML = `Polarity: ${res.score_tag}`;
+}
+
+export { handleSubmit, updateUI };
