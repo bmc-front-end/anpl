@@ -1,9 +1,14 @@
 
+footer{
+    display: flex;
+    justify-content:flex-end;    
+}
+
 footer ul{
     width:fit-content;
-    border-radius:15px 0px 15px 0px;
+    background-color:#00f5d4;
+    border-radius:0px 20px 0px 20px;
     padding:20px;
-    border:1.25px solid black;
 }
 footer li{
     display:inline;
