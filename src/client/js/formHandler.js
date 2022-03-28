@@ -1,4 +1,4 @@
-import { checkUrl } from "./nameChecker";
+import { checkUrl } from "./validationChecker";
 
 async function handleSubmit(event) {
     event.preventDefault();
