@@ -1,34 +1,37 @@
+@use 'shared';
+
 header {
     display: flex;
-    justify-content:space-between;
-  //  padding: 10px 40px;
+    justify-content: space-between;
 }
 
 .logo {
- //   display: hidden;
-width:fit-content;
-height: fit-content;
- //   background: url("../views/logo.png") center;
- background-color:#00f5d4;
- border-radius:0px 20px 0px 20px;
- padding:20px;
- font-size:1.25rem;
- line-height: 2rem;
+    //   display: hidden;
+    width: fit-content;
+    height: fit-content;
+    //   background: url("../views/logo.png") center;
+    background-color: shared.$side-color;
+    border-radius: shared.$border-radius;
+    padding: shared.$padding;
+    font-size: 1.25rem;
+    line-height: 2rem;
 }
 
-.navigation ul {
-    border-radius:0px 10px 0px 20px;    
-    background-color: #00f5d4;
-    padding:20px;
-    font-size:1.15rem;
-}
+.navigation {
+    ul {
+        border-radius: 0px 10px 0px 20px;
+        background-color: shared.$side-color;
+        padding: shared.$padding;
+        font-size: 1.15rem;
+    }
 
-.navigation li {
-    padding-bottom:1.15rem;
-}
+    li {
+        padding-bottom: 1.15rem;
+    }
 
+}
 
 .logo .emph {
-text-transform: uppercase;
-font-weight: 800;
+    text-transform: uppercase;
+    font-weight: shared.$font-weight;
 }

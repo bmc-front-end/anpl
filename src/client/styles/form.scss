@@ -1,7 +1,9 @@
+@use 'shared.scss';
+
 form {
-    border-radius:20px 0px 20px 0px;
+    border-radius: shared.$border-radius;
     padding: 40px;
-    background-color:#feee85;
+    background-color: #feee85;
 }
 
 input {
@@ -12,12 +14,12 @@ input {
     border-radius: 20px;
 }
 
-input[submit]{
-    border-radius:20px;
+input[submit] {
+    border-radius: 20px;
 }
 
 label {
-    font-weight:800;
+    font-weight: shared.$font-weight;
 }
 
 h1.form {
